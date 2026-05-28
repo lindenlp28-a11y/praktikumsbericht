@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Praktikumsbericht – Julius Lindenlaub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="gate-body">
+  <div class="gate-container">
+    <div class="gate-logo">BUILD<span>TOMORROW</span></div>
+    <h1>Praktikumsbericht</h1>
+    <p class="muted">Julius Lindenlaub · 2025–2026</p>
+    <div class="gate-form">
+      <input
+        type="password"
+        id="codeInput"
+        placeholder="Zugangscode eingeben"
+        autocomplete="off"
+      />
+      <button onclick="checkCode()">Öffnen →</button>
+      <p id="gate-error" class="gate-error" style="display:none">
+        Falscher Code. Bitte nochmal versuchen.
+      </p>
+    </div>
+  </div>
+  <script>
+    function checkCode() {
+      const code = document.getElementById('codeInput').value.trim();
+      if (code === 'PRAKTIKUM2026') {
+        window.location.href = 'main.html';
+      } else {
+        const err = document.getElementById('gate-error');
+        err.style.display = 'block';
+        document.getElementById('codeInput').focus();
+      }
+    }
+    document.getElementById('codeInput').addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') checkCode();
+    });
+  </script>
+</body>
+</html>
