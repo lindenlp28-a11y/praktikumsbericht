@@ -176,6 +176,33 @@ nav a:hover, nav a.active { color: var(--accent); font-weight: 600; }
 .reflex-block { margin-bottom: 40px; }
 .reflex-block h3 { color: var(--accent); margin-bottom: 8px; }
 
+/* ── Stat Cards ──────────────────────────────────── */
+.stat-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.stat-card {
+  background: #e8f0e7;
+  border-radius: 6px;
+  padding: 16px;
+  text-align: center;
+}
+.stat-number {
+  font-family: Georgia, serif;
+  font-size: 1.8rem;
+  color: var(--accent);
+  line-height: 1.1;
+  margin-bottom: 4px;
+}
+.stat-label {
+  font-size: 0.72rem;
+  color: var(--accent);
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+}
+
 /* ── Competency Grid ─────────────────────────────── */
 .kompetenz-cols {
   display: grid;
