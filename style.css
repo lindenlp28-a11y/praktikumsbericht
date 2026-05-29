@@ -176,22 +176,69 @@ nav a:hover, nav a.active { color: var(--accent); font-weight: 600; }
 .reflex-block { margin-bottom: 40px; }
 .reflex-block h3 { color: var(--accent); margin-bottom: 8px; }
 
-/* ── Competency Tags ─────────────────────────────── */
-.tag-group { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 20px; }
-.tag {
-  background: #f0ece8;
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  padding: 4px 14px;
-  font-size: 0.78rem;
-  font-family: 'Inter', sans-serif;
-  color: var(--text);
+/* ── Competency Grid ─────────────────────────────── */
+.kompetenz-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
 }
-.tag.accent {
-  background: #e8f0e7;
-  border-color: var(--accent-light);
-  color: var(--accent);
-  font-weight: 500;
+.kompetenz-col {
+  background: #f5f3f0;
+  border-radius: 6px;
+  padding: 16px;
+}
+.kompetenz-col.accent { background: #e8f0e7; }
+.kompetenz-col-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.kompetenz-col.accent .kompetenz-col-title { color: var(--accent); }
+.kompetenz-col:not(.accent) .kompetenz-col-title { color: var(--text-muted); }
+.kompetenz-col-desc {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+.kompetenz-list { display: flex; flex-direction: column; gap: 6px; }
+.kompetenz-item {
+  background: #fff;
+  border-radius: 4px;
+  padding: 7px 10px;
+}
+.k-name {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 1px;
+}
+.k-source {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+}
+.kompetenz-lernt {
+  background: #fafaf8;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.kompetenz-lernt-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+.kompetenz-lernt .kompetenz-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
 }
 
 /* ── KI Questions ────────────────────────────────── */
