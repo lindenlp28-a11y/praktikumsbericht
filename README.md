@@ -45,9 +45,6 @@ In `main.html` die auskommentierten `<!-- ... -->` Blöcke einkommentieren und `
 - Alle `<!-- Eigene ... -->` Kommentare in `main.html` durch echten Inhalt ersetzen
 - `[Studiengang]` im Footer ersetzen
 
-## Zugangscode ändern
-In `index.html` Zeile 30: `'PRAKTIKUM2026'` durch gewünschten Code ersetzen.
-
 ## Checkliste vor Abgabe
 - [ ] Alle `<!-- ... -->` Textkommentare durch echten Inhalt ersetzt
 - [ ] Alle 3 YouTube Recap-Video-IDs eingesetzt (Woche 1–4, 5–8, 9–12)
