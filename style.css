@@ -176,6 +176,31 @@ nav a:hover, nav a.active { color: var(--accent); font-weight: 600; }
 .reflex-block { margin-bottom: 40px; }
 .reflex-block h3 { color: var(--accent); margin-bottom: 8px; }
 
+/* ── Erwartung vs. Realität ──────────────────────── */
+.vs-table { width: 100%; border-collapse: collapse; margin-bottom: 24px; font-family: 'Inter', sans-serif; }
+.vs-table th {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 8px 14px;
+  text-align: left;
+}
+.vs-table th:first-child { background: #f0ece8; color: var(--text-muted); border-radius: 4px 0 0 0; }
+.vs-table th:last-child  { background: #e8f0e7; color: var(--accent);     border-radius: 0 4px 0 0; }
+.vs-table td {
+  padding: 10px 14px;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  vertical-align: top;
+  border-bottom: 1px solid var(--border);
+}
+.vs-table td:first-child { background: #fdf9f7; color: var(--text-muted); width: 50%; }
+.vs-table td:last-child  { background: #f4f8f3; color: var(--text); }
+.vs-table tr:last-child td { border-bottom: none; }
+.vs-table tr:last-child td:first-child { border-radius: 0 0 0 4px; }
+.vs-table tr:last-child td:last-child  { border-radius: 0 0 4px 0; }
+
 /* ── Stat Cards ──────────────────────────────────── */
 .stat-row {
   display: grid;
