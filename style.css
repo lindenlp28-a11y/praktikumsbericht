@@ -176,30 +176,6 @@ nav a:hover, nav a.active { color: var(--accent); font-weight: 600; }
 .reflex-block { margin-bottom: 40px; }
 .reflex-block h3 { color: var(--accent); margin-bottom: 8px; }
 
-/* ── Erwartung vs. Realität ──────────────────────── */
-.vs-table { width: 100%; border-collapse: collapse; margin-bottom: 24px; font-family: 'Inter', sans-serif; }
-.vs-table th {
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  padding: 8px 14px;
-  text-align: left;
-}
-.vs-table th:first-child { background: #f0ece8; color: var(--text-muted); border-radius: 4px 0 0 0; }
-.vs-table th:last-child  { background: #e8f0e7; color: var(--accent);     border-radius: 0 4px 0 0; }
-.vs-table td {
-  padding: 10px 14px;
-  font-size: 0.82rem;
-  line-height: 1.5;
-  vertical-align: top;
-  border-bottom: 1px solid var(--border);
-}
-.vs-table td:first-child { background: #fdf9f7; color: var(--text-muted); width: 50%; }
-.vs-table td:last-child  { background: #f4f8f3; color: var(--text); }
-.vs-table tr:last-child td { border-bottom: none; }
-.vs-table tr:last-child td:first-child { border-radius: 0 0 0 4px; }
-.vs-table tr:last-child td:last-child  { border-radius: 0 0 4px 0; }
 
 /* ── Stat Cards ──────────────────────────────────── */
 .stat-row {
@@ -368,3 +344,95 @@ footer {
   color: #c0392b;
   margin-top: 4px;
 }
+
+/* ── Progress Bar ────────────────────────────────── */
+#progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: var(--accent);
+  width: 0%;
+  z-index: 200;
+  transition: width 0.08s linear;
+  pointer-events: none;
+}
+
+/* ── Fade-in on Scroll ───────────────────────────── */
+.fade-in {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Hover Lift ──────────────────────────────────── */
+.kompetenz-item {
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.kompetenz-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.07);
+}
+.stat-card {
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(45, 90, 39, 0.15);
+}
+.kompetenz-col {
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.kompetenz-col:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+.vs-pair {
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.vs-pair:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.07);
+}
+.timeline-phase {
+  transition: padding-left 0.2s ease;
+}
+.timeline-phase:hover {
+  padding-left: 6px;
+}
+.ki-question {
+  border-left: 3px solid transparent;
+  padding-left: 16px;
+  margin-left: -19px;
+  transition: border-left-color 0.2s ease;
+}
+.ki-question:hover {
+  border-left-color: var(--accent);
+}
+
+/* ── Erwartungen vs. Realität Cards ─────────────── */
+.vs-stack { display: flex; flex-direction: column; gap: 14px; margin-bottom: 24px; }
+.vs-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+.vs-erwartet { background: #fdf9f7; border-right: 1px solid var(--border); padding: 16px 18px; }
+.vs-realitaet { background: #f4f8f3; padding: 16px 18px; }
+.vs-badge {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 8px;
+}
+.vs-erwartet .vs-badge { color: var(--text-muted); }
+.vs-realitaet .vs-badge { color: var(--accent); }
+.vs-erwartet p, .vs-realitaet p { font-size: 0.84rem; line-height: 1.6; margin-bottom: 0; }

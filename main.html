@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div id="progress-bar"></div>
 
   <!-- Navigation -->
   <nav>
@@ -81,7 +82,7 @@
       <div class="timeline">
 
         <!-- Phase 1 -->
-        <div class="timeline-phase">
+        <div class="timeline-phase fade-in">
           <div class="timeline-dot">1</div>
           <p class="label phase-label">Wochen 1–4</p>
           <h3 class="phase-title">Onboarding &amp; erste Projekte</h3>
@@ -97,7 +98,7 @@
         </div>
 
         <!-- Phase 2 -->
-        <div class="timeline-phase">
+        <div class="timeline-phase fade-in">
           <div class="timeline-dot">2</div>
           <p class="label phase-label">Wochen 5–8</p>
           <h3 class="phase-title">Erste Kundenprojekte</h3>
@@ -113,7 +114,7 @@
         </div>
 
         <!-- Phase 3 -->
-        <div class="timeline-phase">
+        <div class="timeline-phase fade-in">
           <div class="timeline-dot">3</div>
           <p class="label phase-label">Wochen 9–12</p>
           <h3 class="phase-title">Skalierung &amp; Abschluss</h3>
@@ -137,7 +138,7 @@
       <p class="section-number">03</p>
       <h2>Reflexion</h2>
 
-      <div class="reflex-block">
+      <div class="reflex-block fade-in">
         <h3>Typischer Arbeitstag</h3>
         <p>
           Einen klassischen typischen Arbeitstag gab es während des Praktikums kaum,
@@ -152,16 +153,16 @@
         </p>
       </div>
 
-      <div class="reflex-block">
+      <div class="reflex-block fade-in">
         <h3>Gesamtziele &amp; Ergebnisse</h3>
 
-        <div class="stat-row">
+        <div class="stat-row fade-in">
           <div class="stat-card">
-            <div class="stat-number">3</div>
+            <div class="stat-number" data-target="3" data-suffix="">3</div>
             <div class="stat-label">zahlende Kunden</div>
           </div>
           <div class="stat-card">
-            <div class="stat-number">10+</div>
+            <div class="stat-number" data-target="10" data-suffix="+">10+</div>
             <div class="stat-label">Leads im Gespräch</div>
           </div>
           <div class="stat-card">
@@ -199,7 +200,7 @@
         </p>
       </div>
 
-      <div class="reflex-block">
+      <div class="reflex-block fade-in">
         <h3>Highlight-Aufgabe</h3>
         <p>
           Eine besondere Highlight-Aufgabe während des Praktikums war die Durchführung
@@ -220,10 +221,10 @@
         </div>
       </div>
 
-      <div class="reflex-block">
+      <div class="reflex-block fade-in">
         <h3>Kompetenzen</h3>
 
-        <div class="kompetenz-cols">
+        <div class="kompetenz-cols fade-in">
           <div class="kompetenz-col accent">
             <div class="kompetenz-col-title">Fachlich</div>
             <p class="kompetenz-col-desc">Aus Studium und selbstständiger Praxis.</p>
@@ -279,7 +280,7 @@
           </div>
         </div>
 
-        <div class="kompetenz-lernt">
+        <div class="kompetenz-lernt fade-in">
           <div class="kompetenz-lernt-title">In der Gründungsphase gelernt</div>
           <div class="kompetenz-list">
             <div class="kompetenz-item">
@@ -302,31 +303,41 @@
         </div>
       </div>
 
-      <div class="reflex-block">
+      <div class="reflex-block fade-in">
         <h3>Erwartungen vs. Realität</h3>
 
-        <table class="vs-table">
-          <thead>
-            <tr>
-              <th>Erwartet</th>
-              <th>Realität</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Schneller Start durch Verbandsunterstützung (VGL Hessen-Thüringen) — fast ein Jahr Vorlaufzeit</td>
-              <td>Verband enttäuschte trotz Interesse — direkter Kundenkontakt über Mitgliederversammlung, Familiennetzwerk und Kaltakquise war deutlich wirkungsvoller</td>
-            </tr>
-            <tr>
-              <td>Produkte und Leistungen müssen zuerst klar definiert sein, bevor Kunden überzeugt werden können</td>
-              <td>Kundengespräche kamen vor der Produktdefinition — wer versteht was Betriebe brauchen und das konkret zeigt, überzeugt schneller als jedes Konzeptpapier</td>
-            </tr>
-            <tr>
-              <td>Geschäftsmodell: ~70 % Beratung &amp; Schulungen, ~30 % Umsetzung</td>
-              <td>Beratung und Schulungen wurden komplett gestrichen — das Modell verschob sich vollständig hin zu individuellen Umsetzungsprojekten und Programmierung</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="vs-stack">
+          <div class="vs-pair">
+            <div class="vs-erwartet">
+              <div class="vs-badge">Erwartet</div>
+              <p>Schneller Start durch starke Verbandsunterstützung — fast ein Jahr Vorlaufzeit mit dem VGL Hessen-Thüringen.</p>
+            </div>
+            <div class="vs-realitaet">
+              <div class="vs-badge">Realität</div>
+              <p>Verband enttäuschte trotz Interesse. Direkter Kundenkontakt über Mitgliederversammlung, Familiennetzwerk und Kaltakquise war deutlich wirkungsvoller.</p>
+            </div>
+          </div>
+          <div class="vs-pair">
+            <div class="vs-erwartet">
+              <div class="vs-badge">Erwartet</div>
+              <p>Produkte und Leistungen müssen zuerst klar definiert sein, bevor Kunden überzeugt werden können.</p>
+            </div>
+            <div class="vs-realitaet">
+              <div class="vs-badge">Realität</div>
+              <p>Kundengespräche kamen vor der Produktdefinition — wer versteht was Betriebe brauchen und es konkret zeigt, überzeugt schneller als jedes Konzeptpapier.</p>
+            </div>
+          </div>
+          <div class="vs-pair">
+            <div class="vs-erwartet">
+              <div class="vs-badge">Erwartet</div>
+              <p>Geschäftsmodell: ~70 % Beratung &amp; Schulungen, ~30 % Umsetzung.</p>
+            </div>
+            <div class="vs-realitaet">
+              <div class="vs-badge">Realität</div>
+              <p>Beratung und Schulungen wurden komplett gestrichen — das Modell verschob sich vollständig zu individuellen Umsetzungsprojekten und Programmierung.</p>
+            </div>
+          </div>
+        </div>
 
         <p>
           Die größte Überraschung war nicht das, was schwieriger wurde — sondern was
@@ -345,7 +356,7 @@
       <p class="section-number">04</p>
       <h2>Fokus: KI-Einsatz</h2>
 
-      <div class="ki-question">
+      <div class="ki-question fade-in">
         <p class="q-label">Frage 1</p>
         <h3>Welche KI-Technologien werden eingesetzt?</h3>
         <p>
@@ -390,7 +401,7 @@
         </div>
       </div>
 
-      <div class="ki-question">
+      <div class="ki-question fade-in">
         <p class="q-label">Frage 2</p>
         <h3>Auswirkungen auf Arbeitsprozesse und Entscheidungsfindung</h3>
         <p>
@@ -411,7 +422,7 @@
         </p>
       </div>
 
-      <div class="ki-question">
+      <div class="ki-question fade-in">
         <p class="q-label">Frage 3</p>
         <h3>Eigene Rolle und Berührungspunkte mit KI</h3>
         <p>
@@ -433,7 +444,7 @@
         </div>
       </div>
 
-      <div class="ki-question">
+      <div class="ki-question fade-in">
         <p class="q-label">Frage 4</p>
         <h3>Potenzial für stärkere KI-Nutzung im GaLaBau</h3>
         <p>
@@ -537,5 +548,6 @@
   </footer>
 
   <script src="nav.js"></script>
+  <script src="animations.js"></script>
 </body>
 </html>
