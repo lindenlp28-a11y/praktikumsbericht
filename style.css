@@ -96,6 +96,23 @@ nav a:hover, nav a.active { color: var(--accent); font-weight: 600; }
 .hero .label { margin-bottom: 16px; }
 .hero h1 { margin-bottom: 8px; }
 .hero .hero-sub { font-size: 1rem; color: var(--text-muted); }
+.hero-grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.hero-text { flex: 1 1 320px; }
+.hero-portrait {
+  flex: 0 0 auto;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 30%;
+  border: 1px solid var(--border);
+}
 
 /* ── Section Headers ─────────────────────────────── */
 .section-number {
@@ -287,6 +304,15 @@ footer {
   font-size: 0.8rem;
   color: var(--text-muted);
   border-top: 1px solid var(--border);
+}
+.footer-logo {
+  display: block;
+  height: 26px;
+  width: auto;
+  margin: 0 auto 16px;
+  border: none;
+  border-radius: 0;
+  opacity: 0.8;
 }
 
 /* ── Code Gate (index.html only) ─────────────────── */
