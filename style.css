@@ -320,6 +320,47 @@ nav a:hover, nav a.active { color: var(--accent); font-weight: 600; }
   gap: 6px;
 }
 
+/* ── Kompetenzen: 2 Kacheln (vorher / während) ───── */
+.kompetenz-tiles {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.kompetenz-tile {
+  background: #f5f3f0;
+  border-radius: 6px;
+  padding: 20px;
+}
+.kompetenz-tile.accent { background: #e8f0e7; }
+.kompetenz-tile-title {
+  font-family: Georgia, serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 2px;
+}
+.kompetenz-tile-sub {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+.kompetenz-group + .kompetenz-group { margin-top: 16px; }
+.kompetenz-grouplabel {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+.kompetenz-list.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+}
+
 /* ── KI Questions ────────────────────────────────── */
 .ki-question { margin-bottom: 36px; }
 .ki-question .q-label {
