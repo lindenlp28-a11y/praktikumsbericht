@@ -492,6 +492,12 @@ footer p { margin-bottom: 0; min-width: 0; }
   color: var(--accent);
   margin-bottom: 6px;
 }
+.site-link {
+  font-weight: 600;
+  border-bottom: 1px solid var(--accent-light);
+  transition: border-color 0.15s;
+}
+.site-link:hover { border-bottom-color: var(--accent); }
 
 /* ── Erwartungen vs. Realität Cards ─────────────── */
 .vs-stack { display: flex; flex-direction: column; gap: 14px; margin-bottom: 24px; }
