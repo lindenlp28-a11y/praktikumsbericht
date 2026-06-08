@@ -58,13 +58,13 @@ p  { margin-bottom: 1rem; color: var(--text); }
 .feature-list li strong { color: var(--text); }
 .lead-in { margin-bottom: 0.75rem; }
 
-/* ── Abschnitts-Logo ─────────────────────────────── */
-.about-logo {
-  height: 34px;
+/* ── Hero-Logo ───────────────────────────────────── */
+.hero-logo {
+  height: 30px;
   width: auto;
   border: none;
   border-radius: 0;
-  margin-bottom: 18px;
+  margin-top: 18px;
   display: block;
 }
 .label {
@@ -140,12 +140,11 @@ nav a:hover, nav a.active { color: var(--accent); font-weight: 600; }
 .hero-text { flex: 1 1 320px; }
 .hero-portrait {
   flex: 0 0 auto;
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: center 30%;
-  border: 1px solid var(--border);
+  width: 230px;
+  height: auto;
+  border: none;
+  border-radius: 0;
+  align-self: center;
 }
 
 /* ── Section Headers ─────────────────────────────── */
