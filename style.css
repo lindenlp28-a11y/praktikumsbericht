@@ -474,6 +474,25 @@ footer p { margin-bottom: 0; min-width: 0; }
   border-left-color: var(--accent);
 }
 
+/* ── Hover-Streifen + Eyebrow (wiederverwendbar) ─── */
+.hover-stripe {
+  border-left: 3px solid transparent;
+  padding-left: 16px;
+  margin-left: -19px;
+  margin-bottom: 32px;
+  transition: border-left-color 0.2s ease;
+}
+.hover-stripe:last-child { margin-bottom: 0; }
+.hover-stripe:hover { border-left-color: var(--accent); }
+.eyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+
 /* ── Erwartungen vs. Realität Cards ─────────────── */
 .vs-stack { display: flex; flex-direction: column; gap: 14px; margin-bottom: 24px; }
 .vs-pair {
